@@ -57,6 +57,7 @@ const Gallery = () => {
    * @param {boolean} [isButtonSearch=false]
    */
   const handleSearch = (e, isButtonSearch = false) => {
+    if (query === searchInput) return;
     if (e?.key === 'Enter' || isButtonSearch) {
       setImages([]);
       setPage(1);
